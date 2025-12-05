@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StickyNav Pro | Demo Navbar Sticky</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navegación Sticky -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">🧭</span>
+                <span class="logo-text">StickyNav Pro</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#features" class="nav-link">Características</a></li>
+                <li><a href="#pricing" class="nav-link">Planes</a></li>
+                <li><a href="#testimonios" class="nav-link">Opiniones</a></li>
+                <li><a href="#contacto" class="nav-link btn-cta">Probar Ahora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <p class="hero-tag">CSS Avanzado · Position: sticky · UX Moderna</p>
+            <h1>Domina el Navbar Sticky como un Pro</h1>
+            <p class="subtitle">
+                Aprende cómo hacer que tu barra de navegación se mantenga visible mientras el usuario hace scroll,
+                usando <code>position: sticky</code> y un toque de diseño moderno.
+            </p>
+            <div class="hero-actions">
+                <a href="#features" class="btn-primary">Ver cómo funciona</a>
+                <a href="#pricing" class="btn-secondary">Ver planes ficticios</a>
+            </div>
+            <div class="scroll-indicator">
+                <p>Desplázate hacia abajo</p>
+                <span>↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2>✨ ¿Qué hace especial a <span class="gradient-text">position: sticky</span>?</h2>
+            <p class="section-intro">
+                Es la combinación perfecta entre un elemento normal y uno fijo. Mira algunas de sus ventajas:
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">📍</div>
+                    <h3>Se pega al scrollear</h3>
+                    <p>
+                        Cuando el navbar llega a <code>top: 0</code>, se comporta como un elemento con
+                        <code>position: fixed</code> sin salir del flujo del documento.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🧱</div>
+                    <h3>Ocupa su espacio</h3>
+                    <p>
+                        Al estar en el flujo normal, no genera saltos bruscos en el layout como otras posiciones
+                        absolutas.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Sin JavaScript</h3>
+                    <p>
+                        El efecto sticky funciona solo con CSS. El JavaScript aquí solo mejora la experiencia visual.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎨</div>
+                    <h3>Estilos dinámicos</h3>
+                    <p>
+                        Con la clase <code>.scrolled</code> cambiamos fondo, sombra y altura cuando el usuario hace
+                        scroll.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section section-alt">
+        <div class="container">
+            <h2>💰 Planes (Ficticios) para tu Navbar</h2>
+            <p class="section-intro">
+                Solo para practicar maquetación. Aquí no se cobra nada, pero sí se diseña bonito.
+            </p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Básico</h3>
+                    <p class="price">$0<span>/para practicar</span></p>
+                    <ul>
+                        <li>✔️ Navbar sticky simple</li>
+                        <li>✔️ 1 página de ejemplo</li>
+                        <li>✔️ Ideal para aprender bases</li>
+                    </ul>
+                    <button>Elegir Básico</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Más usado</div>
+                    <h3>Intermedio</h3>
+                    <p class="price">$0<span>/para tus proyectos</span></p>
+                    <ul>
+                        <li>✔️ Navbar sticky + scroll suave</li>
+                        <li>✔️ Secciones múltiples</li>
+                        <li>✔️ Diseño responsive completo</li>
+                    </ul>
+                    <button>Elegir Intermedio</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Avanzado</h3>
+                    <p class="price">$0<span>/nivel pro</span></p>
+                    <ul>
+                        <li>✔️ Animaciones y glassmorphism</li>
+                        <li>✔️ Botón “Volver arriba”</li>
+                        <li>✔️ Ideal para portafolios</li>
+                    </ul>
+                    <button>Elegir Avanzado</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="section">
+        <div class="container">
+            <h2>💬 Opiniones de desarrolladores</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="quote">
+                        "Antes usaba siempre <code>position: fixed</code>. Ahora con sticky el navbar se siente
+                        más natural y fluido."
+                    </p>
+                    <p class="author">- María García, UX Designer</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">
+                        "Lo usé en mi portafolio y el cliente notó la diferencia de usabilidad en el primer minuto."
+                    </p>
+                    <p class="author">- Carlos Pérez, Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section section-alt">
+        <div class="container">
+            <h2>📧 ¿Dudas sobre position: sticky?</h2>
+            <p class="section-intro">
+                Imagina que este formulario envía tus preguntas a un mentor de CSS.
+                Por ahora es solo estático, pero sirve perfecto para practicar estilos.
+            </p>
+            <form class="contact-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 StickyNav Pro. Demo educativa de position: sticky.</p>
+        </div>
+    </footer>
+
+    <!-- Botón "Volver Arriba" (Position: Fixed) -->
+    <button class="btn-top" id="btnTop" title="Volver arriba">
+        ↑
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

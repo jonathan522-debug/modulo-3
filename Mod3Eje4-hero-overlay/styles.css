@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #22d3ee;
+    /* cyan */
+    --color-secondary: #6366f1;
+    /* indigo */
+    --color-text: #e5e7eb;
+    --color-text-soft: #cbd5f5;
+    --color-muted: #9ca3af;
+    --color-bg-light: #f8fafc;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    background: #020617;
+}
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+.hero {
+    position: relative;
+    height: 100vh;
+
+    /* Nueva imagen de fondo (ciudad/futurista/tech) */
+    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&h=1080&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ==============================
+   OVERLAY SEMITRANSPARENTE
+   ============================== */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    /* Overlay más oscuro con toque de color */
+    background: radial-gradient(circle at top left,
+            rgba(34, 211, 238, 0.3) 0,
+            rgba(15, 23, 42, 0.95) 40%,
+            rgba(15, 23, 42, 1) 100%);
+
+    z-index: 1;
+}
+
+/* ==============================
+   REDES SOCIALES
+   ============================== */
+.social-links {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.social-links a {
+    color: var(--color-text);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.social-links a:hover {
+    transform: translateX(6px);
+    border-color: rgba(34, 211, 238, 0.8);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* ==============================
+   CONTENIDO HERO
+   ============================== */
+.hero-content {
+    z-index: 10;
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+    animation: fadeInUp 0.9s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
+
+    color: var(--color-text-soft);
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.hero-content h1 {
+    color: #f9fafb;
+    font-size: 3.3rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    text-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content p {
+    color: var(--color-text-soft);
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 0 auto 2.4rem;
+    line-height: 1.7;
+}
+
+/* ==============================
+   BOTONES HERO
+   ============================== */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    padding: 0.9rem 2.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #020617;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 25px 65px rgba(15, 23, 42, 1);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+    border-color: rgba(148, 163, 184, 0.8);
+}
+
+.btn-secondary:hover {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   ESTADÍSTICAS HERO
+   ============================== */
+.hero-stats {
+    display: flex;
+    gap: 2.8rem;
+    justify-content: center;
+}
+
+.stat {
+    min-width: 110px;
+    padding: 1.2rem 1.4rem;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
+}
+
+.stat h3 {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.stat p {
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0;
+}
+
+/* ==============================
+   SCROLL INDICATOR
+   ============================== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-soft);
+    cursor: default;
+
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+.scroll-indicator span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.scroll-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.9);
+}
+
+/* ==============================
+   SECCIÓN DE CONTENIDO
+   ============================== */
+.content-section {
+    padding: 5rem 2rem;
+    background: var(--color-bg-light);
+}
+
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.content-container h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #111827;
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    background: #ffffff;
+    padding: 2.3rem 2rem;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    color: #111827;
+    margin-bottom: 0.7rem;
+}
+
+.feature p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 900px) {
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+        padding: 0 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        left: 1rem;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 1.1rem;
+    }
+
+    .social-links {
+        display: none;
+        /* Ocultar redes en pantallas muy pequeñas si quieres */
+    }
+
+    .content-section {
+        padding: 3.5rem 1.2rem;
+    }
+}
